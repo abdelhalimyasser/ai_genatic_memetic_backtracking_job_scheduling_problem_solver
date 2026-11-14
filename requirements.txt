@@ -1,0 +1,13 @@
+# Mathematical's
+pandas
+numpy
+
+# Visualization
+matplotlib
+plotly
+
+# GUI
+nicegui
+
+# Testing
+pytest
