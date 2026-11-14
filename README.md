@@ -38,12 +38,12 @@ To solve and analyze this problem, our system implements and benchmarks three di
 
 | Name                  | GitHub                                                             | Module |
 |-----------------------|--------------------------------------------------------------------|--------|
-| Abdelhalim Yasser     | [@abdelhalimyasser](https://github.com/abdelhalimyasser)           |  |
-| Ali Samy              | [@AliSamy12](https://github.com/Aly-Sami)                          |  |
-| Nour Eldeen Shaban    | [@noureldeenshaaban](https://github.com/noureldeenshaaban)         |  |
-| Yousef Mohamed        | [@yousefmass](https://github.com/yousefmass)                       |  |
-| Norhan Ezzat          | [@nourhan-eg](https://github.com/nourhan-eg)                       |  |
-| Mariam Mohamed        | [@MaRIam-Mo7amed](https://github.com/MaRIam-Mo7amed)               |  |
+| Abdelhalim Yasser     | [@abdelhalimyasser](https://github.com/abdelhalimyasser)           | - Genetic Module |
+| Ali Samy              | [@AliSamy12](https://github.com/Aly-Sami)                          | - Genetic Module |
+| Nour Eldeen Shaban    | [@noureldeenshaaban](https://github.com/noureldeenshaaban)         | - Backtracking Module |
+| Yousef Mohamed        | [@yousefmass](https://github.com/yousefmass)                       | - Backtracking Module |
+| Norhan Ezzat          | [@nourhan-eg](https://github.com/nourhan-eg)                       | - Memetic Module |
+| Mariam Mohamed        | [@MaRIam-Mo7amed](https://github.com/MaRIam-Mo7amed)               | - Memetic Module |
 
 ---
 
