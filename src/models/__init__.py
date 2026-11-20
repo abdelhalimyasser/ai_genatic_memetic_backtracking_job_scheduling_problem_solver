@@ -1,11 +1,14 @@
+from src.models.operation import Operation
+from src.models.problem_instance import ProblemInstance
+from src.models.result import ScheduleResult
+from src.models.scheduled_operation import ScheduledOperation
+
+
 __version__ = "1.0.0"
-from src.models.problem import Operation, ProblemInstance
-from src.models.schedule import ScheduledBlock
-from src.models.result import SolverResult
 
 __all__ = [
     "Operation",
     "ProblemInstance",
-    "ScheduledBlock",
-    "SolverResult",
+    "ScheduleResult",
+    "ScheduledOperation",
 ]
