@@ -80,12 +80,12 @@ def decode_active_obr(
         machine_ready[m_id] = max(machine_ready[m_id], end_time)
         next_op_idx[job_id] += 1
 
-        makespan = max(
-            (sched.end_time for ops in machine_schedules.values() for sched in ops),
-            default=0,
-        )
-        
-        return makespan, machine_schedules, job_schedules
+    makespan = max(
+        (sched.end_time for ops in machine_schedules.values() for sched in ops),
+        default=0,
+    )
+
+    return makespan, machine_schedules, job_schedules
 
 
 def evaluate_fitness(instance: ProblemInstance, chromosome: list[int]) -> int:
