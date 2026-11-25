@@ -133,7 +133,7 @@ class TestGeneticAlgorithmEngine:
             )
 
             assert mock_create.call_count == pop_size
-            assert mock_eval.call_count == pop_size * (gens + 1)
+            assert mock_eval.call_count == pop_size + offspring_per_gen * gens
             assert mock_select.call_count == 2 * offspring_per_gen * gens
             assert mock_xover.call_count == offspring_per_gen * gens
             assert mock_mutate.call_count == offspring_per_gen * gens
@@ -235,4 +235,23 @@ class TestGeneticAlgorithmEngine:
     ) -> None:
         inst = _make_instance("2x2", [[(0, 3), (1, 4)], [(1, 2), (0, 5)]])
         with pytest.raises(ValueError, match=match):
-            run_genetic_algorithm(inst, **kwargs)  # type: ignore[arg-type]
+            run_genetic_algorithm(inst, **kwargs)
+
+    @pytest.mark.parametrize(
+        ("kwargs", "match"),
+        [
+            ({"population_size": True}, "population_size"),
+            ({"population_size": 10.5}, "population_size"),
+            ({"generations": False}, "generations"),
+            ({"crossover_rate": True}, "crossover_rate"),
+            ({"mutation_rate": "0.1"}, "mutation_rate"),
+            ({"tournament_size": 2.5}, "tournament_size"),
+            ({"elitism_count": False}, "elitism_count"),
+        ],
+    )
+    def test_invalid_parameter_types_raise_type_error(
+        self, kwargs: dict[str, object], match: str
+    ) -> None:
+        inst = _make_instance("2x2", [[(0, 3), (1, 4)], [(1, 2), (0, 5)]])
+        with pytest.raises(TypeError, match=match):
+            run_genetic_algorithm(inst, **kwargs)
